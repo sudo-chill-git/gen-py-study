@@ -259,16 +259,12 @@
             },
             "vertices": [
               {
-                "x": 740,
-                "y": 220
+                "x": 720,
+                "y": 150
               },
               {
                 "x": 810,
-                "y": 190
-              },
-              {
-                "x": 850,
-                "y": 170
+                "y": 110
               }
             ]
           },
@@ -292,7 +288,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "обробка фінансових операцій",
+              "name": "фінансові операції",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -306,7 +302,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "обробка фінансових операцій"
+              "фінансові операції"
             ],
             "id": "23e2122f-b7bc-4248-8cd9-aa3dcf4aeeb0",
             "source": {
@@ -344,7 +340,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Web App\n",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -358,53 +354,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
-            ],
-            "id": "6568eed6-3d4e-4e62-8c47-6812c15ce373",
-            "source": {
-              "cell": "2c6a3f9e-de9b-4c35-822c-da643a5c968b",
-              "port": "9e59e478-d2ce-4b3a-9eab-d480b0ccc11f"
-            },
-            "target": {
-              "cell": "33d6ccaa-1572-470a-86a0-7c8ce7621013",
-              "port": "c7601ba4-ab30-4af6-974a-70b0c2da2c87"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
+              "Web App\n"
             ],
             "id": "3872b44b-3934-4fa7-8e4a-6a83478d0072",
             "source": {
@@ -414,7 +364,13 @@
             "target": {
               "cell": "602cdd32-a5b6-4ba7-8ac0-fa08647ba02b",
               "port": "192011d5-f6a2-46dd-8673-e8cd1ef41ef9"
-            }
+            },
+            "vertices": [
+              {
+                "x": 450,
+                "y": 390
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -436,7 +392,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Web App",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -447,10 +403,12 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "fb7bd5d1-7aa9-4453-8d93-ea33fb7fec88"
+              ]
             },
             "labels": [
-              "Data Flow"
+              "Web App"
             ],
             "id": "6dff1626-f7df-48bc-895d-c8d6d9c08a97",
             "source": {
@@ -466,19 +424,231 @@
                 "x": 440,
                 "y": 340
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HR operations",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "208132bc-12f3-4f99-9c5b-472c01a3c550",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 37,
+                  "score": ""
+                }
+              ],
+              "trustBoundaryIds": [
+                "fb7bd5d1-7aa9-4453-8d93-ea33fb7fec88"
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "HR operations"
+            ],
+            "id": "6568eed6-3d4e-4e62-8c47-6812c15ce373",
+            "source": {
+              "cell": "2c6a3f9e-de9b-4c35-822c-da643a5c968b",
+              "port": "9e59e478-d2ce-4b3a-9eab-d480b0ccc11f"
+            },
+            "target": {
+              "cell": "33d6ccaa-1572-470a-86a0-7c8ce7621013",
+              "port": "c7601ba4-ab30-4af6-974a-70b0c2da2c87"
+            },
+            "vertices": [
+              {
+                "x": 160,
+                "y": 460
+              },
+              {
+                "x": 180,
+                "y": 460
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              "Trust"
+            ],
+            "id": "d1583fff-0473-40f5-8fe6-9a34fc04cdef",
+            "source": {
+              "x": 63,
+              "y": 70
+            },
+            "target": {
+              "cell": "4bca49af-90a8-4f59-9ced-1650217be5bb",
+              "port": "6c243d43-a129-48c3-8331-7c3bdc4973f9"
+            },
+            "vertices": [
+              {
+                "x": 260,
+                "y": 230
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "11b5d8da-8465-4843-8a39-604d903df6c8",
+            "source": {
+              "x": 476,
+              "y": 260
+            },
+            "target": {
+              "cell": "602cdd32-a5b6-4ba7-8ac0-fa08647ba02b",
+              "port": "192011d5-f6a2-46dd-8673-e8cd1ef41ef9"
+            },
+            "vertices": [
+              {
+                "x": 476,
+                "y": 380
+              }
+            ]
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [],
+              "containedElements": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "734a595b-d666-48e6-8e30-eeb494270d02",
+            "source": {
+              "x": 510,
+              "y": 230
+            },
+            "target": {
+              "cell": "e95cfb03-abc0-4d76-8c34-95aee9c734e3",
+              "port": "db59213d-c3bc-4f7f-ab97-da7cd036e037"
+            }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust ",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "6dff1626-f7df-48bc-895d-c8d6d9c08a97",
+                "6568eed6-3d4e-4e62-8c47-6812c15ce373",
+                "1cfe0052-a8cc-452f-9dea-04594646fb43"
+              ],
+              "containedElements": [
+                "33d6ccaa-1572-470a-86a0-7c8ce7621013"
+              ]
+            },
+            "labels": [
+              "Trust "
+            ],
+            "id": "fb7bd5d1-7aa9-4453-8d93-ea33fb7fec88",
+            "source": {
+              "cell": "2c6a3f9e-de9b-4c35-822c-da643a5c968b",
+              "port": "562c022b-84bb-40ca-b560-b3094b6c3c9f"
+            },
+            "target": {
+              "cell": "4bca49af-90a8-4f59-9ced-1650217be5bb",
+              "port": "6c243d43-a129-48c3-8331-7c3bdc4973f9"
+            },
+            "vertices": [
+              {
+                "x": -32,
+                "y": 410
+              },
+              {
+                "x": 50,
+                "y": 290
+              },
+              {
+                "x": 180,
+                "y": 260
+              }
             ],
             "tools": {
               "items": [
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
-                "boundary",
-                "button-remove",
-                "vertices",
-                "source-arrowhead",
-                "target-arrowhead",
                 "boundary",
                 "button-remove",
                 "vertices",
@@ -535,8 +705,8 @@
           },
           {
             "position": {
-              "x": -10,
-              "y": 470
+              "x": -50,
+              "y": 460
             },
             "size": {
               "width": 112.5,
@@ -544,7 +714,7 @@
             },
             "attrs": {
               "text": {
-                "text": "HR\n"
+                "text": "HR Staff\n"
               },
               "body": {
                 "stroke": "red",
@@ -640,7 +810,7 @@
             "id": "2c6a3f9e-de9b-4c35-822c-da643a5c968b",
             "data": {
               "type": "tm.Actor",
-              "name": "HR\n",
+              "name": "HR Staff\n",
               "description": "",
               "isTrustBoundary": false,
               "outOfScope": false,
@@ -670,8 +840,8 @@
           },
           {
             "position": {
-              "x": 920,
-              "y": 20
+              "x": 570,
+              "y": 10
             },
             "size": {
               "width": 120,
@@ -829,8 +999,8 @@
           },
           {
             "position": {
-              "x": 490,
-              "y": 230
+              "x": 450,
+              "y": 200
             },
             "size": {
               "width": 60,
@@ -1078,13 +1248,26 @@
                   "new": false,
                   "number": 14,
                   "score": ""
+                },
+                {
+                  "id": "4dad119a-f4a7-4e2e-b1b4-3fd6fe341532",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 35,
+                  "score": ""
                 }
               ],
               "trustBoundaryIds": [],
               "threatFrequency": {
                 "tampering": 0,
                 "informationDisclosure": 1,
-                "denialOfService": 0
+                "denialOfService": 1
               }
             },
             "labels": [
@@ -1225,7 +1408,7 @@
             "data": {
               "type": "tm.Store",
               "name": "Accounting Database",
-              "description": "",
+              "description": "фінансові транзакції\nзвіти",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1346,7 +1529,7 @@
             "data": {
               "type": "tm.Process",
               "name": "Accounting System",
-              "description": "",
+              "description": "обробка фінансових операцій",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1465,7 +1648,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Web App",
+              "name": "Financial request\n",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1479,7 +1662,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Web App"
+              "Financial request\n"
             ],
             "id": "55be268b-04f1-44d0-9edb-b000d1f2bb16",
             "source": {
@@ -1534,14 +1717,14 @@
             },
             "vertices": [
               {
-                "x": 550,
-                "y": 100
+                "x": 510,
+                "y": 110
               }
             ]
           },
           {
             "position": {
-              "x": 270,
+              "x": 260,
               "y": 390
             },
             "size": {
@@ -1549,14 +1732,18 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "HR System"
+              },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 22,
             "ports": {
               "groups": {
                 "top": {
@@ -1640,20 +1827,93 @@
               ]
             },
             "id": "33d6ccaa-1572-470a-86a0-7c8ce7621013",
-            "zIndex": 22,
             "data": {
               "type": "tm.Process",
-              "name": "Process",
-              "description": "",
+              "name": "HR System",
+              "description": "управління персональними даними",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "752bde9a-f47b-46f6-855d-28ac3e9a15aa",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 29,
+                  "score": ""
+                },
+                {
+                  "id": "ec0f2a12-34d4-4290-9137-f557f16c6386",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 30,
+                  "score": ""
+                },
+                {
+                  "id": "b32ba88a-015b-4e94-a425-5570f635b8e7",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Elevation of privilege",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 31,
+                  "score": ""
+                },
+                {
+                  "id": "05e9197c-9441-447e-8913-45a7fc237ab0",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 32,
+                  "score": ""
+                },
+                {
+                  "id": "38f308fc-155f-46dc-a115-4b0109055a90",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Denial of service",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 33,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 1,
+                "repudiation": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -1666,17 +1926,23 @@
               "height": 60
             },
             "attrs": {
+              "text": {
+                "text": "HR Database"
+              },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 23,
             "ports": {
               "groups": {
                 "top": {
@@ -1760,21 +2026,53 @@
               ]
             },
             "id": "602cdd32-a5b6-4ba7-8ac0-fa08647ba02b",
-            "zIndex": 23,
             "data": {
               "type": "tm.Store",
-              "name": "Store",
-              "description": "",
+              "name": "HR Database",
+              "description": "ПІБ\nЗП\nІПН",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "d6d6fe84-07cb-4963-b07b-15db393677aa",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 39,
+                  "score": ""
+                },
+                {
+                  "id": "87fad13f-7f4e-4ab1-8d13-2121a07e172f",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 40,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             }
           },
           {
@@ -1808,26 +2106,34 @@
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [],
-              "trustBoundaryIds": []
+              "trustBoundaryIds": [
+                "fb7bd5d1-7aa9-4453-8d93-ea33fb7fec88"
+              ]
             },
             "labels": [
               "Data Flow"
             ],
             "id": "1cfe0052-a8cc-452f-9dea-04594646fb43",
             "source": {
-              "x": 300,
-              "y": 450
+              "cell": "33d6ccaa-1572-470a-86a0-7c8ce7621013",
+              "port": "56226499-5f17-4bbe-90b0-95434d5fd1c4"
             },
             "target": {
               "cell": "602cdd32-a5b6-4ba7-8ac0-fa08647ba02b",
               "port": "51058dd5-9449-4990-a7d7-d78497e92941"
-            }
+            },
+            "vertices": [
+              {
+                "x": 350,
+                "y": 510
+              }
+            ]
           }
         ]
       }
     ],
     "diagramTop": 1,
     "reviewer": "I'am",
-    "threatTop": 28
+    "threatTop": 40
   }
 }
